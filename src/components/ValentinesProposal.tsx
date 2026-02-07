@@ -176,7 +176,14 @@ export default function ValentinesProposal() {
             exit={{ opacity: 0 }}
           >
            Then we continue, I love you very much 💕
-            <p className="text-sm mt-4">For more information, write me!!! 💌</p>
+            <p className="text-sm mt-4">Very very very very very much 💌</p>
+            <a
+  href="https://USERNAME.github.io/REPO/scene3/"
+  className="mt-6 inline-flex items-center justify-center rounded-xl px-5 py-3 text-sm font-semibold bg-white/10 hover:bg-white/20 border border-white/20"
+>
+  Continue
+</a>
+
             <Image
               src="/hamster_jumping.gif"
               alt="Hamster Feliz"
