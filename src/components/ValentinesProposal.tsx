@@ -51,6 +51,9 @@ const images = [
 
 export default function ValentinesProposal() {
   const [step, setStep] = useState(0);
+  const [answer, setAnswer] = useState("");
+  const [error, setError] = useState("");
+
   const [position, setPosition] = useState<{
     top: string;
     left: string;
@@ -177,12 +180,41 @@ export default function ValentinesProposal() {
           >
            Then we continue, I love you very much 💕
             <p className="text-sm mt-4">Very very very very very much 💌</p>
-            <a
-  href="https://USERNAME.github.io/REPO/scene3/"
-  className="mt-6 inline-flex items-center justify-center rounded-xl px-5 py-3 text-sm font-semibold bg-white/10 hover:bg-white/20 border border-white/20"
->
-  Continue
-</a>
+            <div className="mt-6 flex flex-col items-center gap-3">
+  <p className="text-base opacity-90 text-center">
+    Riddle: What word describes us since the day we started talking?
+  </p>
+
+  <input
+    value={answer}
+    onChange={(e) => {
+      setAnswer(e.target.value);
+      setError("");
+    }}
+    placeholder="Type the answer..."
+    className="w-72 rounded-xl bg-white/10 border border-white/20 px-4 py-2 text-sm outline-none focus:ring-2 focus:ring-white/30 text-center"
+  />
+
+  <button
+    className="inline-flex items-center justify-center rounded-xl px-5 py-3 text-sm font-semibold bg-white/10 hover:bg-white/20 border border-white/20"
+    onClick={() => {
+      const cleaned = answer.trim().toLowerCase();
+
+      // ✅ ПРАВИЛЬНЫЙ ОТВЕТ (меняешь здесь)
+      if (cleaned === "love") {
+        // ✅ ССЫЛКА НА СЦЕНУ 3 (меняешь здесь)
+        window.location.href = "https://USERNAME.github.io/REPO/scene3/";
+      } else {
+        setError("Not quite 😄 Try again.");
+      }
+    }}
+  >
+    Unlock 💗
+  </button>
+
+  {error && <p className="text-sm text-rose-200">{error}</p>}
+</div>
+
 
             <Image
               src="/hamster_jumping.gif"
