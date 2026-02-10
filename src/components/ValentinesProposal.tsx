@@ -178,11 +178,11 @@ export default function ValentinesProposal() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
-           Then we continue, I love you very much 💕
-            <p className="text-sm mt-4">Very very very very very much 💌</p>
+           I choose you - today, tomorrow, always 💕
+            <p className="text-sm mt-4">And I’ll keep choosing you in every little moment 💌</p>
             <div className="mt-6 flex flex-col items-center gap-3">
   <p className="text-base opacity-90 text-center">
-    Riddle: What word describes us since the day we started talking?
+    Riddle: We carry this dream into sleep again and again. I hope one day we’ll wake up inside it.
   </p>
 
   <input
@@ -201,9 +201,9 @@ export default function ValentinesProposal() {
       const cleaned = answer.trim().toLowerCase();
 
       // ✅ ПРАВИЛЬНЫЙ ОТВЕТ (меняешь здесь)
-      if (cleaned === "love") {
+      if (cleaned === "cascade") {
         // ✅ ССЫЛКА НА СЦЕНУ 3 (меняешь здесь)
-        window.location.href = "https://USERNAME.github.io/REPO/scene3/";
+        window.location.href = "https://gr1gro.github.io/VQ3/";
       } else {
         setError("Not quite 😄 Try again.");
       }
