@@ -228,7 +228,8 @@ export default function ValentinesProposal() {
       </AnimatePresence>
 
       {showFireworks && (
-        <div className="absolute w-full h-full">
+  <div className="absolute w-full h-full pointer-events-none">
+
           <Fireworks
             options={{
               autoresize: true,
