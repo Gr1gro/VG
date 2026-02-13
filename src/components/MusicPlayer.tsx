@@ -6,7 +6,7 @@ export default function MusicPlayer() {
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
-    const audio = new Audio('/public/game-photos/bg.mp3'); // <-- путь к твоему mp3 в public
+    const audio = new Audio('/game-photos/bg.mp3'); // <-- путь к твоему mp3 в public
     audio.loop = true;
     audio.volume = 0.6; // можно убрать или поменять
     audioRef.current = audio;
